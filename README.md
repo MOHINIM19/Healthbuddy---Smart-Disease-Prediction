@@ -1,0 +1,2 @@
+# Healthbuddy---Smart-Disease-Prediction
+
