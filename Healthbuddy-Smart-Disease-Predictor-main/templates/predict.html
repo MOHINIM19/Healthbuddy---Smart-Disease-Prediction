@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+body {
+    font-family: Cambria;
+    height: 100%;
+    background-image: linear-gradient(#4e0374, #c37ee6);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger"><center>POSITIVE. The patient might have the disease.Need to contact with doctor.</center></div>
+                <div class="row1">
+                    <div class="col-md-4"></div>
+                    <center>
+                        <a href="https://medlineplus.gov/howtopreventdiabetes.html" target="_blank" class="btn btn-block btn-info"> For More Details to prevent from Diabetes</a>
+                        <a href="https://www.cancer.net/cancer-types/breast-cancer/risk-factors-and-prevention" target="_blank" class="btn btn-block btn-info"> For More Details to prevent from Breast Cancer</a>
+                        <a href="https://www.drugs.com/condition/heart-disease.html" target="_blank" class="btn btn-block btn-info"> For More Details to prevent from Heart Disease</a>
+                        <a href="https://www.cdc.gov/kidneydisease/prevention-risk.html" target="_blank" class="btn btn-block btn-info"> For More Details to prevent from Kidney Disease</a>
+                        <a href="https://my.clevelandclinic.org/health/diseases/17819-liver-failure" target="_blank" class="btn btn-block btn-info"> For More Details to prevent from Liver Disease</a>
+                        <a href="https://my.clevelandclinic.org/health/diseases/15014-malaria" target="_blank" class="btn btn-block btn-info"> For More Details to prevent from Malaria Infection</a>
+                        <a href="https://my.clevelandclinic.org/health/diseases/4471-pneumonia" target="_blank" class="btn btn-block btn-info"> For More Details to prevent from Pneumonia</a>
+                    </center><br>
+                </div>
+            {% else %}
+                <div class="card card-body alert alert-success"><center>NEGATIVE. The patient is healthy and dont need any medication </center></div>
+                <div class="card card-body alert alert-success"><center>You are Healthy and dont need to take any more extra Medication </center></div>
+                {% endif %}
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary" style="background-color: #4e0374">Back to Home</a></div>
+                    <div class="col-md-4"></div>
+                </div><br>
+                
+                
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}
